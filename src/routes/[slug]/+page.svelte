@@ -6,6 +6,9 @@
 
 	const currentBurgerComponent = burgers.find((burger) => burger.slug === data.slug);
 	import { ClipboardIcon } from 'svelte-feather-icons';
+
+	let htmlCopied = false;
+	let cssCopied = false;
 </script>
 
 <Somerset
@@ -56,11 +59,17 @@
 					<button
 						on:click={() => {
 							navigator.clipboard.writeText(data.html);
+							htmlCopied = true;
+							setTimeout(() => {
+								htmlCopied = false;
+							}, 3000);
 						}}
 						class="flex items-center gap-x-2 p-2 border border-slate-50/20 rounded-lg hover:border-slate-50/80 text-slate-200/60 hover:text-slate-200 transition duration-300 ease-in-out"
 					>
 						<ClipboardIcon class="w-4 h-4" />
-						<span>Copy</span>
+						<span
+							>{#if htmlCopied}Copied! {:else}Copy{/if}</span
+						>
 					</button>
 				</div>
 				{@html data.formattedHtml}
@@ -68,13 +77,17 @@
 			<div class="border border-slate-50/20 p-6 overflow-x-scroll relative">
 				<div class="absolute top-4 right-4">
 					<button
-						on:click={() => {
+						on:click={(e) => {
 							navigator.clipboard.writeText(data.css);
+							cssCopied = true;
+							setTimeout(() => {
+								cssCopied = false;
+							}, 3000);
 						}}
 						class="flex items-center gap-x-2 p-2 border border-slate-50/20 rounded-lg hover:border-slate-50/80 text-slate-200/60 hover:text-slate-200 transition duration-300 ease-in-out"
 					>
 						<ClipboardIcon class="w-4 h-4" />
-						<span>Copy</span>
+						<span id="copy-css">Copy</span>
 					</button>
 				</div>
 				{@html data.formattedCss}

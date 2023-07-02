@@ -1,0 +1,35 @@
+@tailwind components;
+
+@layer components {
+	.swing-over path:nth-child(1) {
+		stroke-dasharray: 16;
+		stroke-dashoffset: 0;
+
+		@apply transition-all duration-1000 ease-in-out;
+	}
+
+	.swing-over path:nth-child(2) {
+		stroke-dasharray: 44;
+		stroke-dashoffset: 28;
+		@apply transition-all duration-1000;
+	}
+
+	.swing-over path:nth-child(3) {
+		stroke-dasharray: 56;
+		stroke-dashoffset: 40;
+		@apply transition-all duration-1000;
+	}
+
+	.swing-over-opened path:nth-child(1) {
+		stroke-dasharray: 16;
+		stroke-dashoffset: 16;
+	}
+	.swing-over-opened path:nth-child(2) {
+		stroke-dasharray: 44;
+		stroke-dashoffset: -23;
+	}
+	.swing-over-opened path:nth-child(3) {
+		stroke-dasharray: 44;
+		stroke-dashoffset: -23;
+	}
+}

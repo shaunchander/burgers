@@ -2,10 +2,20 @@
 	export let data;
 
 	import { burgers } from '$lib/burgers/index.js';
+	import { Somerset } from 'somerset';
 
 	const currentBurgerComponent = burgers.find((burger) => burger.slug === data.slug);
 	import { ClipboardIcon } from 'svelte-feather-icons';
 </script>
+
+<Somerset
+	title={data.componentName + '| 🍔 Burgers'}
+	canonical={`https://burgers.shaunchander.me/${data.slug}`}
+	openGraph={{
+		title: data.componentName + '| 🍔 Burgers',
+		url: `https://burgers.shaunchander.me/${data.slug}`
+	}}
+/>
 
 <svelte:head>
 	<link

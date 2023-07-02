@@ -38,6 +38,7 @@
 		"@types/node": "^20.3.3",
 		"gsap": "^3.12.2",
 		"shiki": "^0.14.3",
+		"somerset": "^0.0.3",
 		"svelte-feather-icons": "^4.0.1"
 	}
 }

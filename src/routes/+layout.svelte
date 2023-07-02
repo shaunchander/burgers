@@ -54,3 +54,6 @@
 		</p>
 	</div>
 </footer>
+<div class="absolute inset-0 pointer-events-none">
+	<img src="/bg.png" alt="" class="w-full h-full opacity-40 object-cover" />
+</div>

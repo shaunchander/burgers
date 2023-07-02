@@ -14,6 +14,14 @@
 	import { Somerset } from 'somerset';
 </script>
 
+<svelte:head>
+	<script
+		async
+		src="https://umami.services.shaunchander.me/script.js"
+		data-website-id="8ff0b9ad-3e39-4ddc-a050-0c5b6c8b5afb"
+	></script>
+</svelte:head>
+
 <Somerset
 	title="🍔 Burgers"
 	description="A small collection of animated framework-agnostic burgers for your projects. Crafted with TailwindCSS."

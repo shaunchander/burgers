@@ -42,8 +42,6 @@ export async function load({ params }) {
 	};
 }
 
-export const prerender = true;
-
 function convertToFileName(slug: string) {
 	return slug
 		.split('-')

@@ -77,7 +77,11 @@
 				href="https://twitter.com/shaunchander"
 				target="_blank"
 				rel="noopener noreferrer">Shaun Chander</a
-			>.
+			>. | View on
+			<a
+				class="text-purple-300/80 hover:text-purple-400/80 duration-300 ease-in-out"
+				href="https://github.com/shaunchander/burgers">Source code</a
+			>
 		</p>
 	</div>
 </footer>
